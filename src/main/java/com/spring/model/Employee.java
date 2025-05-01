@@ -1,76 +1,25 @@
 package com.spring.model;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 public class Employee {
 	private int id;
 	private String name, gender;
 	private Address address;
-
-	List<Integer> list;
-	Set<Integer> set;
-	Map<Integer, String> map;
-
+	
 	public Employee() {
 		System.out.println("Employee.Employee()");
 	}
-
 	
 
-	public Employee(int id, String name, String gender, Address address, List<Integer> list, Set<Integer> set,
-			Map<Integer, String> map) {
+	public Employee(int id, String name, String gender, Address address) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.address = address;
-		this.list = list;
-		this.set = set;
-		this.map = map;
 	}
 
-
-
-	public List<Integer> getList() {
-		return list;
-	}
-
-
-
-	public void setList(List<Integer> list) {
-		System.out.println("Employee.setList()");
-		this.list = list;
-	}
-
-
-
-	public Set<Integer> getSet() {
-		return set;
-	}
-
-
-
-	public void setSet(Set<Integer> set) {
-		System.out.println("Employee.setSet()");
-		this.set = set;
-	}
-
-
-
-	public Map<Integer, String> getMap() {
-		return map;
-	}
-
-
-
-	public void setMap(Map<Integer, String> map) {
-		System.out.println("Employee.setMap()");
-		this.map = map;
-	}
-
-
+	
+	
 
 	public Address getAddress() {
 		return address;
@@ -109,13 +58,10 @@ public class Employee {
 	}
 
 
-
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + ", list="
-				+ list + ", set=" + set + ", map=" + map + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 	}
 
 	
-
 }
