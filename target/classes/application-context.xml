@@ -6,11 +6,44 @@
 
 	<!-- bean definitions here -->
 	<bean name="emp" class="com.spring.model.Employee">
-	<property name="gender" value="Male" />
-	<property name="id" value="111" />
-	<property name="name" value="Rakesh" />
-	<property name="address" ref="add"/>
-</bean>
+		<property name="gender" value="Male" />
+		<property name="id" value="111" />
+		<property name="name" value="Rakesh" />
+		<property name="address" ref="add" />
+		<property name="list">
+			<list>
+				<value>111</value>
+				<value>11</value>
+				<value>211</value>
+				<value>311</value>
+				<value>1</value>
+				<value>11</value>
+				<value>111</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>222</value>
+				<value>22</value>
+				<value>122</value>
+				<value>422</value>
+				<value>255</value>
+				<value>222</value>
+			</set>
+		</property>
+		<property name="map">
+
+			<map>
+				<entry key="1" value="ONE" />
+				<entry key="2" value="Two" />
+				<entry key="3" value="Three" />
+				<entry key="4" value="Four" />
+				<entry key="1" value="one" />
+				<entry key="5" value="Five" />
+			</map>
+		</property>
+
+	</bean>
 
 
 	<bean name="add" class="com.spring.model.Address">
@@ -20,11 +53,8 @@
 
 
 
-	<!-- <bean name="emp" class="com.spring.model.Employee">
-		<constructor-arg name="id" value="111" />
-		<constructor-arg name="name" value="Mohit" />
-		<constructor-arg name="gender" value="Male" />
-		<constructor-arg name="address" ref="" />
-	</bean> -->
+	<!-- <bean name="emp" class="com.spring.model.Employee"> <constructor-arg 
+		name="id" value="111" /> <constructor-arg name="name" value="Mohit" /> <constructor-arg 
+		name="gender" value="Male" /> <constructor-arg name="address" ref="" /> </bean> -->
 
 </beans>
