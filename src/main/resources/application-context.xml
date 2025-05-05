@@ -6,7 +6,7 @@
 
 	<!-- bean definitions here -->
 	<bean name="emp" class="com.spring.model.Employee"
-		autowire="constructor">
+		autowire="constructor" scope="prototype">
 		<constructor-arg name="id" value="111" />
 		<constructor-arg name="name" value="Rakesh" />
 		<constructor-arg name="gender" value="Male" />
@@ -17,11 +17,5 @@
 		<constructor-arg name="city" value="Noida" />
 		<constructor-arg name="state" value="UP" />
 	</bean>
-
-
-
-	<!-- <bean name="emp" class="com.spring.model.Employee"> <constructor-arg 
-		name="id" value="111" /> <constructor-arg name="name" value="Mohit" /> <constructor-arg 
-		name="gender" value="Male" /> <constructor-arg name="address" ref="" /> </bean> -->
 
 </beans>

@@ -5,17 +5,18 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean definitions here -->
-	<bean name="emp" class="com.spring.model.Employee"
-		autowire="constructor" scope="prototype">
+	<bean name="emp" class="com.spring.model.Employee">
 		<constructor-arg name="id" value="111" />
 		<constructor-arg name="name" value="Rakesh" />
 		<constructor-arg name="gender" value="Male" />
+		<constructor-arg name="address">
+			<bean class="com.spring.model.Address">
+				<constructor-arg name="city" value="Lucknow" />
+				<constructor-arg name="state" value="UP" />
+			</bean>
+		</constructor-arg>
 	</bean>
 
 
-	<bean name="address" class="com.spring.model.Address">
-		<constructor-arg name="city" value="Noida" />
-		<constructor-arg name="state" value="UP" />
-	</bean>
 
 </beans>
